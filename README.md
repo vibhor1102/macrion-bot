@@ -36,8 +36,9 @@ month are shared, so two continuously running free services will exceed it.
 Leave existing services unchanged unless you intentionally replace one.
 
 1. Open [Render](https://dashboard.render.com/), choose **New → Web Service**, and
-   connect the private GitHub repository `vibhor1102/macrion-bot`. Authorise the
-   Render GitHub application for this repository if needed.
+   select **Public Git Repository** and enter
+   `https://github.com/vibhor1102/macrion-bot`. This route does not require the
+   Render GitHub integration or access to your other repositories.
 2. Use these settings:
 
    | Setting | Value |
@@ -67,9 +68,8 @@ Leave existing services unchanged unless you intentionally replace one.
    `{"status": "ready"}` with HTTP 200. A starting/disconnected bot returns 503;
    this checks the Discord connection rather than only the HTTP server.
 
-Alternatively, use **New → Blueprint** and select this repository. `render.yaml`
-already selects a free web service and prompts for all three variables. Do not
-create both a manual service and a Blueprint service.
+`render.yaml` also records the intended free-service configuration. Follow the
+manual public-repository steps above to bypass the GitHub integration.
 
 ## 3. UptimeRobot and live verification (browser)
 
@@ -121,3 +121,12 @@ References: [Render Free](https://render.com/docs/free),
 [Render environment variables](https://render.com/docs/configure-environment-variables),
 [Discord Gateway events](https://docs.discord.com/developers/events/gateway-events),
 [discord.py](https://discordpy.readthedocs.io/en/stable/).
+
+## License
+
+Copyright (C) 2026 Vibhor Goel.
+
+Macrion Jr. is free software licensed under the GNU General Public License,
+version 3 or (at your option) any later version (**GPL-3.0-or-later**), matching
+Macrion's copyleft terms. See [LICENSE](LICENSE) for the complete terms.
+This program is provided without warranty.

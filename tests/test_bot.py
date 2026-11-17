@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Vibhor Goel
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 from types import SimpleNamespace
 import unittest
 from unittest.mock import AsyncMock, Mock
