@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: macrion-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m macrion_jr
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_GUILD_ID
+        sync: false
+      - key: DISCORD_LOG_CHANNEL_ID
+        sync: false
